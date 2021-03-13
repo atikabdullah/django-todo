@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-4 offset-4">
+            <h1 class="display-1 text-center">Opdater</h1>
+            <div class="d-flex flex-row justify-content-around mt-4">
+                <a class="btn btn-disabled rounded mb-3 text-center border border-black" disabled>Opdater Todo</a>
+                <a class="btn btn-info rounded text-white mb-3 text-center" href="/">Alle Todos</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="form-row mb-2">
+                        <label for="id_name">
+                            Tekst
+                        </label>
+                        {{ form.name }}
+                    </div>
+                    <div class="form-row mb-2">
+                        <label for="id_due_date">
+                            Forfaldsdato
+                        </label>
+                        {{ form.due_date }}
+                    </div>
+                    <div class="form-row mb-2">
+                        <label for="id_description">
+                            Beskrivelse
+                        </label>
+                        {{ form.description }}
+                    </div>
+                    <div class="form-row d-flex justify-content-center">
+                        <button class="btn btn-secondary" style="width: 12rem;" type="submit">Bekræft</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

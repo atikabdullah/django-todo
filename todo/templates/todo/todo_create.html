@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-4 offset-4">
+            <h1 class="display-1 text-center">Opret Todo</h1>
+            <div class="d-flex flex-row justify-content-around mt-4">
+                <a class="btn btn-disabled rounded mb-3 text-center border border-black" disabled>Opret Todo</a>
+                <a class="btn btn-info rounded text-white mb-3 text-center" href="/">Alle Todos</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="form-row mb-2">
+                        <label for="name" style="width: 8rem;">Tekst</label>
+                        <input class="form-control" type="text" name="name" id="name" value="">
+                    </div>
+                    <div class="form-row mb-2">
+                        <label for="due_date" style="width: 8rem;">Forfaldsdato</label>
+                        <input class="form-control" type="date" name="due_date" id="due_date" value="">
+                    </div>
+                    <div class="form-row mb-2">
+                        <label for="description" style="width: 8rem;">Beskrivelse</label>
+                        <input class="form-control" type="text" name="description" id="description" value="">
+                    </div>
+                    <div class="form-row d-flex justify-content-center">
+                        <button class="btn btn-secondary" style="width: 12rem;" type="submit">Bekræft</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
