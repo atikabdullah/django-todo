@@ -7,6 +7,10 @@
                 <a class="btn btn-disabled rounded mb-3 text-center border border-black" disabled>Aktive Todos</a>
                 <a class="btn btn-info rounded text-white mb-3 text-center" href="/create">Opret Todo</a>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1">
             <hr>
         </div>
     </div>
@@ -14,7 +18,7 @@
         <div class="col-10 offset-1 d-flex flex-wrap justify-content-center">
             {% for todo in todo_lists %}
                 {% if todo.checked is False %}
-                    <div class="card text-center mb-3 mx-2"  style="min-width: 18rem; max-width: 18rem;">
+                    <div class="card text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
                         <div class="card-header">
                             <div class="card-title my-1 text-truncate">
                                 {{ todo }}
@@ -27,15 +31,11 @@
                         <div class="card-body">
                             <p>{{ todo.description }}</p>
                         </div>
-                        <div class="mb-2 mx-2">
+                        <div class="mb-2 mx-2 d-flex justify-content-center">
                             <form method="post" action="/{{ todo.id }}/check/">
                                 {% csrf_token %}
-                                <div class="form-check form-switch">
-                                    <label>
-                                        Ikke færdig
-                                        <input name="{{ todo.checked }}" id="{{ todo.checked }}" onchange="this.form.submit()" type="checkbox" class="form-check-input" {% if todo.checked %}checked {% else %}{% endif %}>
-                                    </label>
-                                </div>
+                                <input name="{{ todo.checked }}" id="{{ todo.checked }}" onchange="this.form.submit()" type="checkbox" class="btn-check" autocomplete="off">
+                                <label class="btn btn-sm btn-primary mx-1" for="{{ todo.checked }}">Færdig</label>
                             </form>
                             <a class="btn btn-sm btn-info mx-1" href="/{{ todo.id }}/">Vis</a>
                             <a class="btn btn-sm btn-warning mx-1" href="{{ todo.id }}/update/">Opdater</a>
@@ -44,11 +44,6 @@
                     </div>
                 {% endif %}
             {% endfor %}
-        </div>
-        <div class="col-8 offset-2">
-            <div class="border border-bottom border-dark mb-3"></div>
-        </div>
-        <div class="col-10 offset-1 d-flex flex-wrap justify-content-center">
             {% for todo in todo_lists %}
                 {% if todo.checked is True %}
                     <div class="card text-dark bg-light text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
@@ -64,14 +59,11 @@
                         <div class="card-body">
                             <p>{{ todo.description }}</p>
                         </div>
-                        <div class="mb-2 mx-2">
+                        <div class="mb-2 mx-2 d-flex justify-content-center">
                             <form method="post" action="/{{ todo.id }}/check/">
                                 {% csrf_token %}
-                                <div class="form-check form-switch">
-                                    <label>Færdig
-                                        <input name="{{ todo.checked }}" id="{{ todo.checked }}" onchange="this.form.submit()" type="checkbox" class="form-check-input" {% if todo.checked %}checked {% else %}{% endif %}>
-                                    </label>
-                                </div>
+                                <input name="{{ todo.checked }}" id="{{ todo.checked }}" onchange="this.form.submit()" type="checkbox" class="btn-check">
+                                <label class="btn btn-sm btn-secondary mx-1" for="{{ todo.checked }}">Færdig</label>
                             </form>
                             <a class="btn btn-sm btn-secondary mx-1" href="/{{ todo.id }}/">Vis</a>
                             <a class="btn btn-sm btn-secondary mx-1" href="{{ todo.id }}/update/">Opdater</a>
