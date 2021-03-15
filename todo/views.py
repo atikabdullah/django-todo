@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 
 from .forms import TodoForm
@@ -6,9 +7,12 @@ from .models import Todo
 
 def todo_list(request):
 	todos = Todo.objects.all().order_by('due_date')
-	print(todos)
+	paginator = Paginator(todos, 4)
+	page_number = request.GET.get('page')
+	page_obj = paginator.get_page(page_number)
 	context = {
-		"todo_lists": todos,
+		"page_obj": page_obj,
+
 	}
 	return render(request, "todo/todo_list.html", context)
 
@@ -27,9 +31,8 @@ def todo_create(request):
 		"form": form,
 	}
 	if form.is_valid():
-		# Alt -> new_todo = Todo.objects.create(name=form.cleaned_data['name'], due_date=form.cleaned_data['due_date '])
 		form.save()
-		return redirect('/')
+		return redirect('/todo/')
 	return render(request, "todo/todo_create.html", context)
 
 
@@ -53,10 +56,10 @@ def todo_check(request, id):
 	else:
 		todo.checked = True
 		todo.save()
-	return redirect('/')
+	return redirect('/todo/')
 
 
 def todo_delete(request, id):
 	todo = Todo.objects.get(id=id)
 	todo.delete()
-	return redirect('/')
+	return redirect('/todo/')

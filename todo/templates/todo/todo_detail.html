@@ -1,12 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
+    {% include 'components/page_title.html' with heading="Todo Details" %}
+
     <div class="row">
         <div class="col-4 offset-4">
-            <h1 class="display-1 text-center">Detaljer</h1>
-            <div class="d-flex flex-row justify-content-around mt-4">
-                <a class="btn btn-disabled rounded mb-3 text-center border border-black" disabled>Detaljer</a>
-                <a class="btn btn-info rounded text-white mb-3 text-center" href="/">Aktive Todos</a>
-            </div>
             <div class="card text-center mb-3">
                 <div class="card-header">
                     <p class="lead my-1">{{ todo }}</p>
@@ -16,10 +13,11 @@
                     <p>{{ todo.description }}</p>
                 </div>
                 <div class="card-footer mx-2">
-                    <a class="btn btn-sm btn-warning mx-1" href="update/">Opdater</a>
-                    <a class="btn btn-sm btn-danger mx-1" href="delete/">Slet</a>
+                    <a class="btn btn-sm btn-warning mx-1" href="{% url 'todo:update' todo.id %}">Update</a>
+                    <a class="btn btn-sm btn-danger mx-1" href="{% url 'todo:delete' todo.id %}">Delete</a>
                 </div>
             </div>
+            {% include 'components/back_button.html' %}
         </div>
     </div>
 {% endblock %}

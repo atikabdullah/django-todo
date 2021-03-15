@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    {% include 'components/page_title.html' with heading="Update Todo" %}
+    {% include 'components/page_title.html' with heading="Update Bookmark" %}
     <div class="row">
         <div class="col-4 offset-4">
             <form method="post">
@@ -13,10 +13,10 @@
                         {{ form.name }}
                     </div>
                     <div class="form-row mb-2">
-                        <label for="id_due_date">
-                            Due Date
+                        <label for="id_url">
+                            URL
                         </label>
-                        {{ form.due_date }}
+                        {{ form.url }}
                     </div>
                     <div class="form-row mb-2">
                         <label for="id_description">

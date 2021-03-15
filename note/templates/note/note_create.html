@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    {% include 'components/page_title.html' with heading="Create Todo" %}
+    {% include 'components/page_title.html' with heading="Create Note" %}
     <div class="row">
         <div class="col-4 offset-4">
             <form method="post">
@@ -9,10 +9,6 @@
                     <div class="form-row mb-2">
                         <label for="name" style="width: 8rem;">Name</label>
                         <input class="form-control" type="text" name="name" id="name" value="">
-                    </div>
-                    <div class="form-row mb-2">
-                        <label for="due_date" style="width: 8rem;">Due Date</label>
-                        <input class="form-control" type="date" name="due_date" id="due_date" value="">
                     </div>
                     <div class="form-row mb-2">
                         <label for="description" style="width: 8rem;">Description</label>

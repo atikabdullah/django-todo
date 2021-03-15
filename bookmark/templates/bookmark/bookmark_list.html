@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="d-flex flex-wrap justify-content-center mt-4">
+                {% for bookmark in page_obj %}
+                    <div class="card text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
+                        <div class="card-header">
+                            <div class="card-title my-1 text-truncate">
+                                {{ bookmark }}
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>{{ bookmark.description }}</p>
+                        </div>
+                        <div class="mb-2 mx-2 d-flex justify-content-center">
+                            <a class="btn btn-sm btn-info mx-1" href="{% url 'bookmark:detail' bookmark.id %}">Show</a>
+                            <a class="btn btn-sm btn-warning mx-1" href="{% url 'bookmark:update' bookmark.id %}">Update</a>
+                            <a class="btn btn-sm btn-danger mx-1" href="{% url 'bookmark:delete' bookmark.id %}">Delete</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            {% include 'paginator.html' %}
+        </div>
+    </div>
+{% endblock %}

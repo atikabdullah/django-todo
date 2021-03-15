@@ -4,8 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add requirements.txt">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Update .gitignore&#10;Add workspace.xml">
+      <change afterPath="$PROJECT_DIR$/bookmark/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0002_auto_20210315_1452.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0003_remove_bookmark_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0004_bookmark_date_created.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0005_auto_20210315_1954.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crashcourse/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0002_note_date_created.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0003_auto_20210315_1954.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/templates/note/note_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/templates/note/note_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/templates/note/note_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/templates/note/note_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/templatetags/get_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/back_button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/page_title.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/submit_button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/paginator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/migrations/0005_todo_date_created.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/migrations/0006_auto_20210315_1954.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/crashcourse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crashcourse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crashcourse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crashcourse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +86,15 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1pfYfs8xuZ3TBqm5mnQvNR17NZf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -41,12 +103,23 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.xml" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\todo\templates\todo" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\bookmark" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\note" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\bookmarks" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\notes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\crashcourse" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\note" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static\css" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static" />
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -58,7 +131,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="crashcourse.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -85,7 +158,7 @@
       <updated>1615575717599</updated>
       <workItem from="1615575719454" duration="7712000" />
       <workItem from="1615623141503" duration="10483000" />
-      <workItem from="1615813025429" duration="44000" />
+      <workItem from="1615813025429" duration="20181000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -108,16 +181,36 @@
       <option name="project" value="LOCAL" />
       <updated>1615633531419</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update .gitignore&#10;Add workspace.xml">
+      <created>1615813100133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615813100133</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit." />
     <MESSAGE value="Misc changes." />
     <MESSAGE value="Add requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add requirements.txt" />
+    <MESSAGE value="Update .gitignore&#10;Add workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore&#10;Add workspace.xml" />
   </component>
 </project>

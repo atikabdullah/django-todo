@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    {% include 'components/page_title.html' with heading="Note Detail" %}
+    <div class="row">
+        <div class="col-4 offset-4">
+            <div class="card text-center mb-3">
+                <div class="card-header">
+                    <p class="lead my-1">{{ note }}</p>
+                </div>
+                <div class="card-body">
+                    <p>{{ note.description }}</p>
+                </div>
+                <div class="card-footer mx-2">
+                    <a class="btn btn-sm btn-warning mx-1" href="{% url 'note:update' note.id %}">Update</a>
+                    <a class="btn btn-sm btn-danger mx-1" href="{% url 'note:delete' note.id %}">Delete</a>
+                </div>
+            </div>
+            {% include 'components/submit_button.html' %}
+        </div>
+    </div>
+{% endblock %}

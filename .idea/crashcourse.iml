@@ -23,7 +23,11 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../crashcourse\templates" />
+        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/todo/templates" />
+        <option value="$MODULE_DIR$/note/templates" />
+        <option value="$MODULE_DIR$/bookmark/templates" />
+        <option value="$MODULE_DIR$/crashcourse/templates" />
       </list>
     </option>
   </component>
