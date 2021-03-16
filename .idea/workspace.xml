@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Start work towards querying and filtering results.">
-      <change afterPath="$PROJECT_DIR$/note/templatetags/relative_url.py" afterDir="false" />
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Simple url parameter queries in place.">
+      <change afterPath="$PROJECT_DIR$/note/migrations/0012_auto_20210316_2037.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0013_auto_20210316_2108.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/sorting_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/templates/todo/list_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/list_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,7 @@
       <workItem from="1615575719454" duration="7712000" />
       <workItem from="1615623141503" duration="10483000" />
       <workItem from="1615813025429" duration="20683000" />
-      <workItem from="1615877050269" duration="36069000" />
+      <workItem from="1615877050269" duration="38787000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -157,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615910502191</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Simple url parameter queries in place.">
+      <created>1615923365253</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615923365253</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +193,7 @@
     <MESSAGE value="Add Notes and Bookmarks.&#10;Add an index page with all item types.&#10;Add navbar." />
     <MESSAGE value="Add markdown support for notes to write articles.&#10;+ Misc." />
     <MESSAGE value="Start work towards querying and filtering results." />
-    <option name="LAST_COMMIT_MESSAGE" value="Start work towards querying and filtering results." />
+    <MESSAGE value="Simple url parameter queries in place." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple url parameter queries in place." />
   </component>
 </project>

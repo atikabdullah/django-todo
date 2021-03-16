@@ -6,7 +6,7 @@
             <div class="jumbotron pt-4">
                 {% include 'components/sorting_bar.html' %}
                 <div class="d-flex flex-wrap justify-content-center mt-4">
-                    <table>
+                    <table class="table table-dark table-striped table-borderless">
                         <thead>
                         <tr>
                             <th>
@@ -23,24 +23,32 @@
                         <tbody>
                         {% for item in page_obj %}
                             {% with itemtype=item|get_class %}
-
-                                {% if itemtype == 'Todo' %}
-                                    {#                                {% include 'todo/list_card.html' %}#}
-                                {% elif itemtype == 'Note' %}
-                                    {#                                {% include 'note/list_card.html' %}#}
-                                {% elif itemtype == 'Bookmark' %}
-                                    {#                                {% include 'bookmark/list_card.html' %}#}
-                                {% endif %}
                                 <tr>
-                                <td>
-                                     {{ item | get_class }}
-                                </td>
                                     <td>
-                                      {{ item.name }}
+                                        {% if itemtype == "Todo" %}
+                                            <i class="bi bi-bell"></i>
+                                        {% elif itemtype == "Note" %}
+                                            <i class="bi bi-file-earmark"></i>
+                                        {% elif itemtype == "Bookmark" %}
+                                            <i class="bi bi-bookmark-check"></i>
+                                        {% endif %}
                                     </td>
-                                <td>{{ item.description }}</td>
+                                    <td>
+                                        {% if item.url %}
+                                            <a href="{{ item.url }}">{{ item.name }}</a>
+                                            {% elif itemtype == "Note" %}
+                                            <a href="{% url 'note:detail' item.id %}">{{ item.name }}</a>
+                                        {% else %}
+                                            {{ item.name }}
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {{ item.description }}
+                                        {% if item.due_date %}
+                                            &mdash; Due {{ item.due_date }}
+                                        {% endif %}
+                                    </td>
                                 </tr>
-
                             {% endwith %}
                         {% endfor %}
                         </tbody>
