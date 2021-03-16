@@ -12,12 +12,12 @@
                     <time>{{ todo.due_date }}</time>
                     <p>{{ todo.description }}</p>
                 </div>
-                <div class="card-footer mx-2">
+                <div class="">
+                    {% include 'components/back_button.html' %}
                     <a class="btn btn-sm btn-warning mx-1" href="{% url 'todo:update' todo.id %}">Update</a>
                     <a class="btn btn-sm btn-danger mx-1" href="{% url 'todo:delete' todo.id %}">Delete</a>
                 </div>
             </div>
-            {% include 'components/back_button.html' %}
         </div>
     </div>
 {% endblock %}

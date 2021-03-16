@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded py-1">
     <a class="navbar-brand" href="#">{{ user }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -6,27 +6,33 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">All Items</a>
             </li>
+            {#            <li class="nav-item">#}
+            {#                <a class="nav-link" href="{% url 'todo:list' %}">Todos</a>#}
+            {#            </li>#}
+            {#            <li class="nav-item">#}
+            {#                <a class="nav-link" href="{% url 'note:list' %}">Notes</a>#}
+            {#            </li>#}
+            {#            <li class="nav-item">#}
+            {#                <a class="nav-link" href="{% url 'bookmark:list' %}">Bookmarks</a>#}
+            {#            </li>#}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'todo:list' %}">Todos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'note:list' %}">Notes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'bookmark:list' %}">Bookmarks</a>
+                <a class="nav-link" href="{% url 'bookmark:list' %}">Archive</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    New
+                    Create
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{% url 'todo:create' %}">Todo</a>
-                    <a class="dropdown-item" href="{% url 'note:create' %}">Note</a>
-                    <a class="dropdown-item" href="{% url 'bookmark:create' %}">Bookmark</a>
+                    <a class="dropdown-item" href="{% url 'todo:create' %}">New Todo</a>
+                    <a class="dropdown-item" href="{% url 'note:create' %}">New Note</a>
+                    <a class="dropdown-item" href="{% url 'bookmark:create' %}">New Bookmark</a>
                 </div>
             </li>
         </ul>
+        <div class="float-right ml-auto">
+            {% include 'components/searchbar.html' %}
+        </div>
     </div>
 </nav>

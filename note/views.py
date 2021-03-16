@@ -7,7 +7,7 @@ from .models import Note
 
 def note_list(request):
 	notes = Note.objects.all()
-	paginator = Paginator(notes, 3)
+	paginator = Paginator(notes, 12)
 	page_number = request.GET.get('page')
 	page_obj = paginator.get_page(page_number)
 	context = {
@@ -52,6 +52,7 @@ def note_delete(request, id):
 	note = Note.objects.get(id=id)
 	note.delete()
 	return redirect('/note/')
+
 
 def note_archive(request, id):
 	note = Note.objects.get(id=id)

@@ -1,0 +1,19 @@
+<form method="get" class="d-flex align-content-center justify-content-center p-2">
+    <div class="mr-3">
+        <button name="date-sort" value="{{ date_sort }}" class="btn btn-primary mx-1">
+            {% if date_sort is 'true' %}
+                <i class="bi bi-sort-numeric-down"></i>
+            {% else %}
+                <i class="bi bi-sort-numeric-up"></i>
+            {% endif %}
+        </button>
+    </div>
+    <div class="mr-3">
+        <button name="notes" value="{{ notes }}" class="btn btn-{% if notes is 'true' %}outline-{% endif %}info mx-1"><i class="bi bi-file-earmark"></i></button>
+        <button name="todos" value="{{ todos }}" class="btn btn-{% if todos is 'true' %}outline-{% endif %}info mx-1"><i class="bi bi-bell"></i></button>
+        <button name="bookmarks" value="{{ bookmarks }}" class="btn btn-{% if bookmarks is 'true' %}outline-{% endif %}info mx-1"><i class="bi bi-bookmark-check"></i></button>
+    </div>
+    <div class="">
+        <button name="toggle-viewtype" value="true" class="btn btn-outline-primary mx-1"><i class="bi bi-table"></i></button>
+    </div>
+</form>

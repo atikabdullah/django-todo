@@ -4,28 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add Notes and Bookmarks.&#10;Add an index page with all item types.&#10;Add navbar.">
-      <change afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/list_card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note/migrations/0004_auto_20210316_0930.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note/migrations/0005_auto_20210316_0933.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note/templates/note/list_card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/templates/todo/list_card.html" afterDir="false" />
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add markdown support for notes to write articles.&#10;+ Misc.">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0006_auto_20210316_1235.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0007_auto_20210316_1250.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0008_auto_20210316_1251.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0009_auto_20210316_1312.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0010_auto_20210316_1312.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note/migrations/0011_auto_20210316_1313.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/searchbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/modals/confirmation_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/crashcourse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crashcourse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookmark/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/list_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/list_card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookmark/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crashcourse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/note/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/note/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/list_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/list_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/note_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/note/templates/note/note_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/templates/note/note_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/templates/note/note_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/note/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/back_button.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/back_button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/submit_button.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/submit_button.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/list_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/list_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +70,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bookmark/templates/bookmark" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -69,16 +82,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\templates" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\bookmark\templates\bookmark" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\note\templates\note" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\todo\templates\todo" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\bookmark" />
-      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\note" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static\css" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\crashcourse" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\note" />
-      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static\css" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\templates" />
     </key>
@@ -120,7 +133,7 @@
       <workItem from="1615575719454" duration="7712000" />
       <workItem from="1615623141503" duration="10483000" />
       <workItem from="1615813025429" duration="20683000" />
-      <workItem from="1615877050269" duration="7031000" />
+      <workItem from="1615877050269" duration="29601000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -157,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615840669718</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add markdown support for notes to write articles.&#10;+ Misc.">
+      <created>1615884308415</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1615884308415</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +202,7 @@
     <MESSAGE value="Add requirements.txt" />
     <MESSAGE value="Update .gitignore&#10;Add workspace.xml" />
     <MESSAGE value="Add Notes and Bookmarks.&#10;Add an index page with all item types.&#10;Add navbar." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Notes and Bookmarks.&#10;Add an index page with all item types.&#10;Add navbar." />
+    <MESSAGE value="Add markdown support for notes to write articles.&#10;+ Misc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add markdown support for notes to write articles.&#10;+ Misc." />
   </component>
 </project>

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load get_class %}
+{% block content %}
+    <div class="row">
+        <div class="col-12 mt-2">
+            <div class="jumbotron pt-4">
+                {% include 'components/sorting_bar.html' %}
+                <div class="d-flex flex-wrap justify-content-center mt-4">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Type
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in page_obj %}
+                            {% with itemtype=item|get_class %}
+
+                                {% if itemtype == 'Todo' %}
+                                    {#                                {% include 'todo/list_card.html' %}#}
+                                {% elif itemtype == 'Note' %}
+                                    {#                                {% include 'note/list_card.html' %}#}
+                                {% elif itemtype == 'Bookmark' %}
+                                    {#                                {% include 'bookmark/list_card.html' %}#}
+                                {% endif %}
+                                <tr>
+                                <td>
+                                     {{ item | get_class }}
+                                </td>
+                                    <td>
+                                      {{ item.name }}
+                                    </td>
+                                <td>{{ item.description }}</td>
+                                </tr>
+
+                            {% endwith %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% include 'paginator.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

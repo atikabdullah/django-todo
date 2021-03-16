@@ -1,13 +1,13 @@
-from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
+from django.shortcuts import render, redirect
+
 from .forms import BookmarkForm
 from .models import Bookmark
 
 
-
 def bookmark_list(request):
 	bookmarks = Bookmark.objects.all()
-	paginator = Paginator(bookmarks, 3)
+	paginator = Paginator(bookmarks, 12)
 	page_number = request.GET.get('page')
 	page_obj = paginator.get_page(page_number)
 	context = {
@@ -15,8 +15,6 @@ def bookmark_list(request):
 
 	}
 	return render(request, "bookmark/bookmark_list.html", context)
-
-
 
 
 def bookmark_detail(request, id):
@@ -35,7 +33,7 @@ def bookmark_create(request):
 	if form.is_valid():
 		form.save()
 		return redirect('/bookmark/')
-	return render(request, "Bookmark/bookmark_create.html", context)
+	return render(request, "bookmark/bookmark_create.html", context)
 
 
 def bookmark_update(request, id):
@@ -54,6 +52,7 @@ def bookmark_delete(request, id):
 	bookmark = Bookmark.objects.get(id=id)
 	bookmark.delete()
 	return redirect('/bookmark/')
+
 
 def bookmark_archive(request, id):
 	bookmark = Bookmark.objects.get(id=id)

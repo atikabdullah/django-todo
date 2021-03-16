@@ -1,20 +1,17 @@
 {% load get_class %}
-<div class="card text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
+<div class="card border-top-0 border-right-0 border-left-0 border-2 border-info text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
     <div class="card-header">
         <div class="card-title my-1 text-truncate">
             <a href="{{ item.url }}">{{ item }}</a>
         </div>
-        <div class="small">{{ item | get_class }}</div>
+        <div class="small text-muted">{{ item | get_class }} <i class="bi bi-bookmark-check-fill"></i></div>
     </div>
-    <div class="d-flex card-body flex-column align-content-between">
+    <div class="d-flex card-body border-left border-right border-secondary flex-column align-content-between">
 
         <p>{{ item.description }}</p>
     </div>
-    <div class="d-flex flex-column card-footer mx-1 justify-content-center py-0">
-        <div class="py-1">
-            <span class="small text-muted">{{ item.date_created }}</span>
-        </div>
-        <div class="d-flex justify-content-center pb-2">
+    <div class="d-flex flex-column card-footer justify-content-center py-0">
+        <div class="d-flex justify-content-center pt-2">
             <form method="post" action={% url 'bookmark:check' item.id %}>
                 {% csrf_token %}
                 <input name="{{ bookmark.checked }}" id="{{ bookmark.checked }}" onchange="this.form.submit()" type="checkbox" class="btn-check" autocomplete="off">
@@ -22,7 +19,12 @@
             </form>
             <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-info{% endif %} mx-1" href="{% url 'bookmark:detail' item.id %}">Show</a>
             <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-warning{% endif %} mx-1" href="{% url 'bookmark:update' item.id %}">Update</a>
-            <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-danger{% endif %} mx-1" href="{% url 'bookmark:delete' item.id %}">Delete</a>
+            <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-danger{% endif %} mx-1"
+               onclick="if (this.innerHTML==='Confirm'){this.href='{% url 'bookmark:delete' item.id %}'};this.innerHTML='Confirm';"
+               href="#">Delete</a>
+        </div>
+        <div class="pb-1">
+            <span class="small text-muted">{{ item.date_created }}</span>
         </div>
     </div>
 </div>
