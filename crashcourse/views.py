@@ -13,9 +13,9 @@ def list_all(request):
 	todos = Todo.objects.all() if request.GET.get('todos') == 'true' else None
 	notes = Note.objects.all() if request.GET.get('notes') == 'true' else None
 	bookmarks = Bookmark.objects.all() if request.GET.get('bookmarks') == 'true' else None
-	date_sort: bool = not request.GET.get('date-sort')  # Switch
+	date_sort = 'false' if request.GET.get('datesort') == 'true' else 'true'
 	search = request.GET.get('search') if request.GET.get('search') is not None else ''
-	toggle_viewtype = True if request.GET.get('toggle-viewtype') == 'true' else False
+	toggle_viewtype = True if request.GET.get('toggle_viewtype') == 'true' else False
 
 	for item in [todos, notes, bookmarks]:
 		if item is not None:
@@ -35,11 +35,11 @@ def list_all(request):
 	page_obj = paginator.get_page(page_number)
 	context = {
 		"page_obj": page_obj,
-		"date_sort": date_sort,
-		"todos" : 'true' if todos else 'false',
-		"notes" : 'true' if notes else 'false',
-		"bookmarks" : 'true' if bookmarks else 'false',
-		"listview" : 'true' if toggle_viewtype else 'false',
+		"datesort": date_sort,
+		"todos" : 'false' if todos else 'true',
+		"notes" : 'false' if notes else 'true',
+		"bookmarks" : 'false' if bookmarks else 'true',
+		"toggle_viewtype" : 'false' if toggle_viewtype else 'true',
 
 	}
 	site = "index.html" if toggle_viewtype is False else "index-table.html"

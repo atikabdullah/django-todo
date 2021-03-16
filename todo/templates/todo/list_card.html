@@ -19,9 +19,6 @@
                 <input name="{{ todo.checked }}" id="{{ todo.checked }}" onchange="this.form.submit()" type="checkbox" class="btn-check" autocomplete="off">
                 <label class="m-0 btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-primary{% endif %} mx-1" for="{{ todo.checked }}">Done</label>
             </form>
-{#            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-delete">#}
-{#                Modal#}
-{#            </button>#}
             <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-info{% endif %} mx-1" href="{% url 'todo:detail' item.id %}">Show</a>
             <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-warning{% endif %} mx-1" href="{% url 'todo:update' item.id %}">Update</a>
             <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-danger{% endif %} mx-1"
