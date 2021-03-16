@@ -6,32 +6,13 @@
             <div class="d-flex flex-wrap justify-content-center mt-4">
                 {% for item in page_obj %}
                     {% with itemtype=item|get_class %}
-                        <div class="card text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
-                            <div class="card-header">
-                                <div class="card-title my-1 text-truncate">
-                                    {{ item |get_class }}
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p>{{ item.description }}</p>
-                                {{ item.model_name }}
-                            </div>
-                            <div class="mb-2 mx-2 d-flex justify-content-center">
-                                {% if itemtype == "Bookmark" %}
-                                    <a class="btn btn-sm btn-info mx-1" href="{% url 'bookmark:detail' item.id %}">Show</a>
-                                    <a class="btn btn-sm btn-warning mx-1" href="{% url 'bookmark:update' item.id %}">Update</a>
-                                    <a class="btn btn-sm btn-danger mx-1" href="{% url 'bookmark:delete' item.id %}">Delete</a>
-                                {% elif itemtype == "Note" %}
-                                    <a class="btn btn-sm btn-info mx-1" href="{% url 'note:detail' item.id %}">Show</a>
-                                    <a class="btn btn-sm btn-warning mx-1" href="{% url 'note:update' item.id %}">Update</a>
-                                    <a class="btn btn-sm btn-danger mx-1" href="{% url 'note:delete' item.id %}">Delete</a>
-                                {% elif itemtype == "Todo" %}
-                                    <a class="btn btn-sm btn-info mx-1" href="{% url 'todo:detail' item.id %}">Show</a>
-                                    <a class="btn btn-sm btn-warning mx-1" href="{% url 'todo:update' item.id %}">Update</a>
-                                    <a class="btn btn-sm btn-danger mx-1" href="{% url 'todo:delete' item.id %}">Delete</a>
-                                {% endif %}
-                            </div>
-                        </div>
+                        {% if itemtype == 'Todo' %}
+                        {% include 'todo/list_card.html' %}
+                        {% elif itemtype == 'Note' %}
+                        {% include 'note/list_card.html' %}
+                        {% elif itemtype == 'Bookmark' %}
+                        {% include 'bookmark/list_card.html' %}
+                        {% endif %}
                     {% endwith %}
                 {% endfor %}
             </div>

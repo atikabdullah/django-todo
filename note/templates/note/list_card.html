@@ -1,0 +1,28 @@
+{% load markdownify %}
+{% load get_class %}
+<div class="card text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
+    <div class="card-header">
+        <div class="card-title my-1 text-truncate">
+            {{ item }}
+        </div>
+        <div class="small">{{ item | get_class }}</div>
+    </div>
+    <div class="d-flex card-body flex-column align-content-between">
+        <p>{{ item.card_description }}</p>
+    </div>
+    <div class="d-flex flex-column card-footer mx-1 justify-content-center py-0">
+        <div class="py-1">
+            <span class="small text-muted">{{ item.date_created }}</span>
+        </div>
+        <div class="d-flex justify-content-center pb-2">
+            <form method="post" action={% url 'note:check' item.id %}>
+                {% csrf_token %}
+                <input name="{{ note.checked }}" id="{{ note.checked }}" onchange="this.form.submit()" type="checkbox" class="btn-check" autocomplete="off">
+                <label class="m-0 btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-primary{% endif %} mx-1" for="{{ note.checked }}">Archive</label>
+            </form>
+            <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-info{% endif %} mx-1" href="{% url 'note:detail' item.id %}">Show</a>
+            <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-warning{% endif %} mx-1" href="{% url 'note:update' item.id %}">Update</a>
+            <a class="btn btn-sm {% if item.checked is True %}btn-secondary{% else %}btn-danger{% endif %} mx-1" href="{% url 'note:delete' item.id %}">Delete</a>
+        </div>
+    </div>
+</div>

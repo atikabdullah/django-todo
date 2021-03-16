@@ -2,7 +2,7 @@
 {% block content %}
     {% include 'components/page_title.html' with heading="Update Note" %}
     <div class="row">
-        <div class="col-4 offset-4">
+        <div class="col-8 offset-2">
             <form method="post">
                 {% csrf_token %}
                 <div class="form-group">
@@ -12,6 +12,13 @@
                         </label>
                         {{ form.name }}
                     </div>
+                    <div class="form-row mb-2">
+                        <label for="id_card_description">
+                            Card Snippet
+                        </label>
+                        {{ form.card_description }}
+                    </div>
+
                     <div class="form-row mb-2">
                         <label for="id_description">
                             Description

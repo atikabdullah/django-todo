@@ -54,3 +54,13 @@ def bookmark_delete(request, id):
 	bookmark = Bookmark.objects.get(id=id)
 	bookmark.delete()
 	return redirect('/bookmark/')
+
+def bookmark_archive(request, id):
+	bookmark = Bookmark.objects.get(id=id)
+	if (bookmark.checked):
+		bookmark.checked = False
+		bookmark.save()
+	else:
+		bookmark.checked = True
+		bookmark.save()
+	return redirect('/bookmark/')

@@ -3,22 +3,8 @@
     <div class="row">
         <div class="col-10 offset-1">
             <div class="d-flex flex-wrap justify-content-center mt-4">
-                {% for note in page_obj %}
-                    <div class="card text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
-                        <div class="card-header">
-                            <div class="card-title my-1 text-truncate">
-                                {{ note }}
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>{{ note.description }}</p>
-                        </div>
-                        <div class="mb-2 mx-2 d-flex justify-content-center">
-                            <a class="btn btn-sm btn-info mx-1" href="{% url 'note:detail' note.id %}">Show</a>
-                            <a class="btn btn-sm btn-warning mx-1" href="{% url 'note:update' note.id %}">Update</a>
-                            <a class="btn btn-sm btn-danger mx-1" href="{% url 'note:delete' note.id %}">Delete</a>
-                        </div>
-                    </div>
+                {% for item in page_obj %}
+                    {% include 'note/list_card.html' %}
                 {% endfor %}
             </div>
             {% include 'paginator.html' %}

@@ -52,3 +52,13 @@ def note_delete(request, id):
 	note = Note.objects.get(id=id)
 	note.delete()
 	return redirect('/note/')
+
+def note_archive(request, id):
+	note = Note.objects.get(id=id)
+	if (note.checked):
+		note.checked = False
+		note.save()
+	else:
+		note.checked = True
+		note.save()
+	return redirect('/note/')
