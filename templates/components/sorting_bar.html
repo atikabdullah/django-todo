@@ -1,18 +1,20 @@
 <form method="post" action="" class="d-flex align-content-center justify-content-center p-2">
     {% csrf_token %}
     <div class="mx-2">
-        <div class="d-flex align-content-center justify-content-center">
-            <label class="m-0 mb-1">
-                {% if datesort == 'true' %}
-                    <i class="bi bi-sort-numeric-down btn btn-success"></i>
-                {% else %}
-                    <i class="bi bi-sort-numeric-up btn btn-outline-success"></i>
-                {% endif %}
-                <input onclick="if (this.value==='true'){this.value='false';}else if(this.value==='false'){this.value='true';};submit()" name="datesort" value="{{ datesort }}" hidden>
-            </label>
-        </div>
-        <div class="d-flex justify-content-center mt-1">
-            <label class="small text-muted">Sorting</label>
+        <div>
+            <div class="d-flex align-content-center justify-content-center">
+                <label class="m-0 mb-1">
+                    {% if datesort == 'true' %}
+                        <i class="bi bi-sort-numeric-down btn btn-success"></i>
+                    {% else %}
+                        <i class="bi bi-sort-numeric-up btn btn-outline-success"></i>
+                    {% endif %}
+                    <input onclick="if (this.value==='true'){this.value='false';}else if(this.value==='false'){this.value='true';};submit()" name="datesort" value="{{ datesort }}" hidden>
+                </label>
+            </div>
+            <div class="d-flex justify-content-center mt-1">
+                <label class="small text-muted">Creation</label>
+            </div>
         </div>
     </div>
     <div>
@@ -50,7 +52,7 @@
     <div class="mx-2">
         <div class="d-flex align-content-center justify-content-center">
             <div class="input-group m-0 mb-1">
-                    <input class="form-control" name="search" type="search" placeholder="Search Items 🔍" aria-label="Search">
+                <input class="form-control" name="search" type="search" placeholder="Search Items 🔍" aria-label="Search">
                 <button class="btn btn-sm btn-info" value="" type="submit">Reset</button>
                 <button class="btn btn-sm btn-success border-0" type="submit">Search</button>
             </div>

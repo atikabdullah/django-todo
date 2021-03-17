@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-    {% include 'components/page_title.html' with heading="Update Todo" %}
     <div class="row">
-        <div class="col-4 offset-4">
+        <div class="col-8 offset-2 jumbotron border border-light mt-3">
+                {% include 'components/page_title.html' with heading="Update Todo" %}
             <form method="post">
                 {% csrf_token %}
                 <div class="form-group">

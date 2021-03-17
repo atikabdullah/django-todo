@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Implement querying through url parameters.">
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Align margins on sortbar. Add create buttons to sortbar.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/searchbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/note_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/note_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/sorting_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +112,7 @@
       <workItem from="1615623141503" duration="10483000" />
       <workItem from="1615813025429" duration="20683000" />
       <workItem from="1615877050269" duration="38787000" />
-      <workItem from="1615961702240" duration="8910000" />
+      <workItem from="1615961702240" duration="12184000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -172,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615967838722</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Align margins on sortbar. Add create buttons to sortbar.">
+      <created>1615970843540</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615970843540</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +213,7 @@
     <MESSAGE value="Start work towards querying and filtering results." />
     <MESSAGE value="Simple url parameter queries in place." />
     <MESSAGE value="Implement querying through url parameters." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement querying through url parameters." />
+    <MESSAGE value="Align margins on sortbar. Add create buttons to sortbar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Align margins on sortbar. Add create buttons to sortbar." />
   </component>
 </project>
