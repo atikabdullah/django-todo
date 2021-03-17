@@ -5,7 +5,6 @@ from bookmark.views import bookmark_detail, bookmark_create, bookmark_update, bo
 app_name = 'bookmark'
 
 urlpatterns = [
-	path('', bookmark_list, name="list"),
 	path('create/', bookmark_create, name="create"),
 	path('<id>/', bookmark_detail, name="detail"),
 	path('<id>/update/', bookmark_update, name="update"),

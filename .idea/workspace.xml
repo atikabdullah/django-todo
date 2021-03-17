@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Align margins on sortbar. Add create buttons to sortbar.">
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Style tableview. Add jumbotrons to create and update pages.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/trash/bookmark_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/templates/note/note_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/templates/note/note_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/note_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/trash/note_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/sorting_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/trash/todo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +68,11 @@
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\bookmark" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\trash" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static\css" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\crashcourse" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\note" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static" />
-      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -112,7 +113,9 @@
       <workItem from="1615623141503" duration="10483000" />
       <workItem from="1615813025429" duration="20683000" />
       <workItem from="1615877050269" duration="38787000" />
-      <workItem from="1615961702240" duration="12184000" />
+      <workItem from="1615961702240" duration="14414000" />
+      <workItem from="1615977813024" duration="4248000" />
+      <workItem from="1615983386743" duration="8191000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -184,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615970843540</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Style tableview. Add jumbotrons to create and update pages.">
+      <created>1615974141870</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615974141870</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +224,18 @@
     <MESSAGE value="Simple url parameter queries in place." />
     <MESSAGE value="Implement querying through url parameters." />
     <MESSAGE value="Align margins on sortbar. Add create buttons to sortbar." />
-    <option name="LAST_COMMIT_MESSAGE" value="Align margins on sortbar. Add create buttons to sortbar." />
+    <MESSAGE value="Style tableview. Add jumbotrons to create and update pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Style tableview. Add jumbotrons to create and update pages." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/crashcourse/views.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
