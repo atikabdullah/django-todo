@@ -35,7 +35,9 @@ def list_all(request):
 		toggle_viewtype = request.POST.get('toggle_viewtype')
 		datesort = request.POST.get('datesort')
 		page= page_obj.number
-		parameterized_url = f"/?todos={todos}&notes={notes}&bookmarks={bookmarks}&toggle_viewtype={toggle_viewtype}&datesort={datesort}&page={page}"
+		search = request.POST.get('search')
+		parameterized_url = f"/?search={search}&todos={todos}&notes={notes}&bookmarks={bookmarks}&toggle_viewtype={toggle_viewtype}&datesort={datesort}&page={page}"
+
 		return redirect(parameterized_url)
 
 	context = {
