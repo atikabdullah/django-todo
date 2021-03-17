@@ -1,19 +1,33 @@
-<form method="get" class="d-flex align-content-center justify-content-center p-2">
+<form method="post" action="" class="d-flex align-content-center justify-content-center p-2">
+    {% csrf_token %}
     <div class="mr-3">
-        <button name="datesort" value="{{ datesort }}" class="btn {% if datesort == 'true' %}btn-success {% else %}btn-warning{% endif %} mx-1">
+        <label>
             {% if datesort == 'true' %}
-                <i class="bi bi-sort-numeric-down"></i>
+                <i class="bi bi-sort-numeric-down btn btn-success mx-1"></i>
             {% else %}
-                <i class="bi bi-sort-numeric-up"></i>
+                <i class="bi bi-sort-numeric-up btn btn-warning mx-1"></i>
             {% endif %}
-        </button>
+            <input onclick="if (this.value==='true'){this.value='false';}else if(this.value==='false'){this.value='true';};submit()" name="datesort" value="{{ datesort }}" hidden>
+        </label>
     </div>
     <div class="mr-3">
-        <button type="submit" name="notes" value="{{ notes }}" class="btn  {% if notes == 'true' %}btn-outline-info {% else %}btn-info{% endif %} mx-1"><i class="bi bi-file-earmark"></i></button>
-        <button type="submit" name="todos" value="{{ todos }}" class="btn {% if todos == 'true' %}btn-outline-info{% else %}btn-info{% endif %} mx-1"><i class="bi bi-bell"></i></button>
-        <button type="submit" name="bookmarks" value="{{ bookmarks }}" class="btn {% if bookmarks == 'true' %}btn-outline-info{% else %}btn-info{% endif %} mx-1"><i class="bi bi-bookmark-check"></i></button>
+        <label>
+            <i class="bi bi-file-earmark btn  {% if notes == 'false' %}btn-outline-info {% else %}btn-info{% endif %} mx-1"></i>
+            <input onclick="if (this.value==='true'){this.value='false';}else if(this.value==='false'){this.value='true';};submit()" type="text" name="notes" value="{{ notes }}" hidden>
+        </label>
+        <label>
+            <i class="bi bi-bell btn {% if todos == 'false' %}btn-outline-info{% else %}btn-info{% endif %} mx-1"></i>
+            <input onclick="if (this.value==='true'){this.value='false';}else if(this.value==='false'){this.value='true';};submit()" type="text" name="todos" value="{{ todos }}" hidden>
+        </label>
+        <label>
+            <i class="bi bi-bookmark-check btn {% if bookmarks == 'false' %}btn-outline-info{% else %}btn-info{% endif %} mx-1"></i>
+            <input onclick="if (this.value==='true'){this.value='false';}else if(this.value==='false'){this.value='true';};submit()" type="text" name="bookmarks" value="{{ bookmarks }}" hidden>
+        </label>
     </div>
     <div class="">
-        <button type="submit" name="toggle_viewtype" value="{{ toggle_viewtype }}" class="btn  {% if toggle_viewtype == 'true' %}btn-outline-info {% else %}btn-info{% endif %} mx-1"><i class="bi bi-table"></i></button>
+        <label>
+            <i class="bi bi-table btn  {% if toggle_viewtype == 'false' %}btn-outline-info {% else %}btn-info{% endif %} mx-1"></i>
+            <input onclick="if (this.value==='true'){this.value='false';}else if(this.value==='false'){this.value='true';};submit()" type="text" name="toggle_viewtype" value="{{ toggle_viewtype }}" hidden>
+        </label>
     </div>
 </form>
