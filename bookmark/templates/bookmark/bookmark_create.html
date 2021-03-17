@@ -18,7 +18,9 @@
                         <label for="url" style="width: 8rem;">URL</label>
                         <input class="form-control" type="text" name="url" id="url" value="">
                     </div>
-                    {% include 'components/submit_button.html' %}
+                    <div class="form-row mt-4 d-flex justify-content-around">
+                        {% include 'components/form_confirm_or_go_back.html' %}
+                    </div>
                 </div>
             </form>
         </div>

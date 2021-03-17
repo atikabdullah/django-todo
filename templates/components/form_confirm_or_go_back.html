@@ -1,0 +1,6 @@
+{% load static %}
+<button class="btn btn-success w-25" style="" type="submit">Confirm</button>
+<button class="btn btn-danger w-25" style=""
+        onclick="if (this.innerHTML==='Confirm'){window.history.back();}else{event.preventDefault();this.innerHTML='Confirm';document.getElementById('goback').play();}">Go Back
+</button>
+<audio id="goback" src="{% static '/audio/dev_tones/tones-wav/pop_drip.wav' %}" preload="auto"></audio>

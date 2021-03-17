@@ -2,7 +2,7 @@
 {% block content %}
     <div class="row">
         <div class="col-8 offset-2 jumbotron border border-light mt-3">
-                {% include 'components/page_title.html' with heading="Update Todo" %}
+            {% include 'components/page_title.html' with heading="Update Todo" %}
             <form method="post">
                 {% csrf_token %}
                 <div class="form-group">
@@ -24,7 +24,9 @@
                         </label>
                         {{ form.description }}
                     </div>
-                    {% include 'components/submit_button.html' %}
+                    <div class="form-row mt-4 d-flex justify-content-around">
+                        {% include 'components/form_confirm_or_go_back.html' %}
+                    </div>
                 </div>
             </form>
         </div>

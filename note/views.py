@@ -1,20 +1,20 @@
-from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 
 from .forms import NoteForm
 from .models import Note
 
 
-def note_list(request):
-	notes = Note.objects.all()
-	paginator = Paginator(notes, 12)
-	page_number = request.GET.get('page')
-	page_obj = paginator.get_page(page_number)
-	context = {
-		"page_obj": page_obj,
-
-	}
-	return render(request, "note/note_list.html", context)
+#
+# def note_list(request):
+# 	notes = Note.objects.all()
+# 	paginator = Paginator(notes, 12)
+# 	page_number = request.GET.get('page')
+# 	page_obj = paginator.get_page(page_number)
+# 	context = {
+# 		"page_obj": page_obj,
+#
+# 	}
+# 	return render(request, "note/note_list.html", context)
 
 
 def note_detail(request, id):
@@ -41,7 +41,7 @@ def note_update(request, id):
 	form = NoteForm(request.POST or None, instance=note)
 	if form.is_valid():
 		form.save()
-		return redirect('/note/')
+		return redirect('/')
 	context = {
 		"form": form,
 	}

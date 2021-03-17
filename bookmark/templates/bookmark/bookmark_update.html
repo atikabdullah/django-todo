@@ -24,7 +24,9 @@
                         </label>
                         {{ form.description }}
                     </div>
-                    {% include 'components/submit_button.html' %}
+                    <div class="form-row mt-4 d-flex justify-content-around">
+                        {% include 'components/form_confirm_or_go_back.html' %}
+                    </div>
                 </div>
             </form>
         </div>

@@ -13,19 +13,20 @@
                         {{ form.name }}
                     </div>
                     <div class="form-row mb-2">
-                        <label for="id_card_description">
-                            Card Snippet
-                        </label>
-                        {{ form.card_description }}
-                    </div>
-
-                    <div class="form-row mb-2">
                         <label for="id_description">
-                            Description
+                            Card Snippet
                         </label>
                         {{ form.description }}
                     </div>
-                    {% include 'components/submit_button.html' %}
+                    <div class="form-row mb-2">
+                        <label for="id_text_content">
+                            Description
+                        </label>
+                        {{ form.text_content }}
+                    </div>
+                    <div class="form-row mt-4 d-flex justify-content-around">
+                        {% include 'components/form_confirm_or_go_back.html' %}
+                    </div>
                 </div>
             </form>
         </div>

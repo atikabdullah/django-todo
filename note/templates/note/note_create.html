@@ -1,9 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
     <div class="row">
         <div class="col-8 offset-2 jumbotron border border-light mt-3">
-                {% include 'components/page_title.html' with heading="Create Note" %}
-
+            {% include 'components/page_title.html' with heading="Create Note" %}
             <form method="post">
                 {% csrf_token %}
                 <div class="form-group">
@@ -12,14 +12,16 @@
                         <input class="form-control" type="text" name="name" id="name" value="">
                     </div>
                     <div class="form-row mb-2">
-                        <label for="card_description" style="width: 8rem;">Card Description</label>
-                        <input class="form-control" type="text" name="card_description" id="card_description" value="">
-                    </div>
-                    <div class="form-row mb-2">
-                        <label for="description" style="width: 8rem;">Description</label>
+                        <label for="description" style="width: 8rem;">Card Description</label>
                         <input class="form-control" type="text" name="description" id="description" value="">
                     </div>
-                    {% include 'components/submit_button.html' %}
+                    <div class="form-row mb-2">
+                        <label for="text_content" style="width: 8rem;">Description</label>
+                        <textarea maxlength="8000" rows="16" class="form-control" name="text_content" id="text_content"></textarea>
+                    </div>
+                    <div class="form-row mt-4 d-flex justify-content-around">
+                        {% include 'components/form_confirm_or_go_back.html' %}
+                    </div>
                 </div>
             </form>
         </div>

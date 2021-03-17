@@ -13,13 +13,14 @@
                                 Type
                             </th>
                             <th class="text-center">
-                                <abbr title="Read, Update and Delete">RUD</abbr>
-                            </th>
-                            <th>
                                 Name
+
                             </th>
                             <th>
                                 Description
+
+                            </th>
+                            <th>
                             </th>
                         </tr>
                         </thead>
@@ -36,40 +37,6 @@
                                             <i class="bi bi-bookmark-check"></i>
                                         {% endif %}
                                     </td>
-                                    <td class="text-center">
-                                        <a href="
-                                            {% if itemtype == 'Todo' %}
-                                            {% url 'todo:update' item.id %}
-                                            {% elif itemtype == 'Note' %}
-                                            {% url 'note:update' item.id %}
-                                            {% elif itemtype == 'Bookmark' %}
-                                            {% url 'bookmark:update' item.id %}
-                                            {% endif %}"
-                                        ><i class="bi bi-pen-fill text-warning"></i>&nbsp;
-                                        </a>
-
-                                        <a href="#"
-                                            {% if itemtype == 'Todo' %}
-                                            onclick="if (this.innerHTML==='❓'){this.href='{% url 'todo:delete' item.id %}'};this.innerHTML='❓';"
-                                            {% elif itemtype == 'Note' %}
-                                            onclick="if (this.innerHTML==='❓'){this.href='{% url 'note:delete' item.id %}'};this.innerHTML='❓';"
-                                            {% elif itemtype == 'Bookmark' %}
-                                            onclick="if (this.innerHTML==='❓'){this.href='{% url 'bookmark:delete' item.id %}'};this.innerHTML='❓';"
-                                            {% endif %}
-                                        ><i class="bi bi-trash2-fill text-danger"></i>&nbsp;
-                                        </a>
-
-                                        <a href="
-                                            {% if itemtype == 'Todo' %}
-                                            {% url 'todo:detail' item.id %}
-                                            {% elif itemtype == 'Note' %}
-                                            {% url 'note:detail' item.id %}
-                                            {% elif itemtype == 'Bookmark' %}
-                                            {% url 'bookmark:detail' item.id %}
-                                            {% endif %}"
-                                        ><i class="bi bi-eye-fill text-info"></i>
-                                        </a>
-                                    </td>
                                     <td>
                                         {% if item.url %}
                                             <a href="{{ item.url }}">{{ item.name }}</a>
@@ -85,6 +52,39 @@
                                             <span class="{% if item.due_date %}text-danger {% else %} text-success {% endif %}">&mdash; Due {{ item.due_date }}</span>
                                             {#                                            TODO: Add  logic to determine if date is overdue.#}
                                         {% endif %}
+                                    </td>
+                                    <td class="d-flex justify-content-around align-items-center">
+                                        <a class="btn btn-sm btn-outline-info" style="width: 2rem; height: 2rem;" href="
+                                            {% if itemtype == 'Todo' %}
+                                            {% url 'todo:detail' item.id %}
+                                            {% elif itemtype == 'Note' %}
+                                            {% url 'note:detail' item.id %}
+                                            {% elif itemtype == 'Bookmark' %}
+                                            {% url 'bookmark:detail' item.id %}
+                                            {% endif %}"
+                                        ><i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-outline-warning" style="width: 2rem; height: 2rem;" href="
+                                            {% if itemtype == 'Todo' %}
+                                            {% url 'todo:update' item.id %}
+                                            {% elif itemtype == 'Note' %}
+                                            {% url 'note:update' item.id %}
+                                            {% elif itemtype == 'Bookmark' %}
+                                            {% url 'bookmark:update' item.id %}
+                                            {% endif %}"
+                                        ><i class="bi bi-pen-fill"></i>&nbsp;
+                                        </a>
+
+                                        <a class="btn btn-sm btn-outline-danger" style="width: 2rem; height: 2rem;" href="#"
+                                                {% if itemtype == 'Todo' %}
+                                           onclick="if (this.innerHTML==='&Cross;'){this.href='{% url 'todo:delete' item.id %}'};this.innerHTML='&Cross;';"
+                                                {% elif itemtype == 'Note' %}
+                                           onclick="if (this.innerHTML==='&Cross;'){this.href='{% url 'note:delete' item.id %}'};this.innerHTML='&Cross;';"
+                                                {% elif itemtype == 'Bookmark' %}
+                                           onclick="if (this.innerHTML==='&Cross;'){this.href='{% url 'bookmark:delete' item.id %}'};this.innerHTML='&Cross;';"
+                                                {% endif %}
+                                        ><i class="bi bi-trash2-fill"></i>&nbsp;
+                                        </a>
                                     </td>
                                 </tr>
                             {% endwith %}

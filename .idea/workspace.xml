@@ -4,18 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Style tableview. Add jumbotrons to create and update pages.">
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add session storage for url parameters to save view state.">
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/dev_tones_License.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/beep_short_off.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/beep_short_on.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/chime_bell_ding.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/click_04.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/digi_plink.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/music_marimba_chord.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/pad_confirm.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-aif/pop_drip.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/beep_short_off.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/beep_short_on.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/chime_bell_ding.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/click_04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/digi_plink.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/music_marimba_chord.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/pad_confirm.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones/tones-wav/pop_drip.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/audio/dev_tones_free.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/trash/bookmark_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookmark/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/templates/bookmark/bookmark_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crashcourse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crashcourse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/templates/note/note_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/trash/note_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/note_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/note_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/templates/note/note_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/templates/note/note_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/note/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/sorting_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/back_button.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/form_confirm_or_go_back.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/page_title.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/page_title.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/trash/todo_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/todo_update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +79,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/audio/dev_tones/tones-wav" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -61,11 +89,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\static\audio\dev_tones\tones-wav" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\templates" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\bookmark\templates\bookmark" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\note\templates\note" />
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\todo\templates\todo" />
-      <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\bookmark" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\s5uso\Desktop\DjangoTutorials\crashcourse\trash" />
@@ -115,7 +143,7 @@
       <workItem from="1615877050269" duration="38787000" />
       <workItem from="1615961702240" duration="14414000" />
       <workItem from="1615977813024" duration="4248000" />
-      <workItem from="1615983386743" duration="8191000" />
+      <workItem from="1615983386743" duration="17368000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -194,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615974141870</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add session storage for url parameters to save view state.">
+      <created>1615991825589</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1615991825589</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,17 +260,7 @@
     <MESSAGE value="Implement querying through url parameters." />
     <MESSAGE value="Align margins on sortbar. Add create buttons to sortbar." />
     <MESSAGE value="Style tableview. Add jumbotrons to create and update pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Style tableview. Add jumbotrons to create and update pages." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crashcourse/views.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Add session storage for url parameters to save view state." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add session storage for url parameters to save view state." />
   </component>
 </project>

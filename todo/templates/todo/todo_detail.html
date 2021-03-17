@@ -1,23 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-    {% include 'components/page_title.html' with heading="Todo Details" %}
-
     <div class="row">
-        <div class="col-4 offset-4">
-            <div class="card text-center mb-3">
-                <div class="card-header">
+        <div class="col-8 offset-2 jumbotron border border-light mt-3">
+            {% include 'components/page_title.html' with heading="Todo Details" %}
+            <div class="d-flex justify-content-center">
+            <div class="text-center bg-dark py-5 border border-secondary w-75 mb-3">
+                  <div class="">
                     <p class="lead my-1">{{ todo }}</p>
-                </div>
-                <div class="card-body">
-                    <time>{{ todo.due_date }}</time>
-                    <p>{{ todo.description }}</p>
+                      <hr class="mx-5">
                 </div>
                 <div class="">
-                    {% include 'components/back_button.html' %}
+                    Due date: <time class="text-danger">{{ todo.due_date }}</time>
+                    <p class="mt-4 text-info">{{ todo.description }}</p>
+                </div>
+                <div class="mt-4">
                     <a class="btn btn-sm btn-warning mx-1" href="{% url 'todo:update' todo.id %}">Update</a>
                     <a class="btn btn-sm btn-danger mx-1" href="{% url 'todo:delete' todo.id %}">Delete</a>
                 </div>
             </div>
+                </div>
+            <div class="form-row mt-4 d-flex justify-content-around">
+                <button class="btn btn-danger w-25" onclick="window.history.back();" style="">Go Back</button>
+            </div>
         </div>
     </div>
 {% endblock %}
+
+
+

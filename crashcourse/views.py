@@ -23,7 +23,6 @@ def set_session(request):
 	bookmarks = request.session['bookmarks'] = 'true'
 	sortbydate = request.session['sortbydate'] = 'false'
 	toggle_viewtype = request.session['toggle_viewtype'] = 'false'
-	# page_no = request.session['page_no'] = '1'
 	search = request.session['search'] = ''
 	request.session['url_parameters'] = f"/?search={search}&todos={todos}&notes={notes}&bookmarks={bookmarks}&toggle_viewtype={toggle_viewtype}&sortbydate={sortbydate}"
 	return request
@@ -35,7 +34,6 @@ def update_session(request):
 	bookmarks = request.session['bookmarks'] = request.POST.get('bookmarks')
 	sortbydate = request.session['sortbydate'] = request.POST.get('sortbydate')
 	toggle_viewtype = request.session['toggle_viewtype'] = request.POST.get('toggle_viewtype')
-	# page_no = request.session['page_no'] = request.POST.get('page_no')
 	if request.POST.get('reset') != 'true':
 		search = request.session['search'] = request.POST.get('search')
 	else:
@@ -74,7 +72,7 @@ def list_all(request):
 		order_by('-date_created' if request.session.get('sortbydate') == 'true' else 'date_created'). \
 		filter(Q(name__contains=request.session.get('search')) | Q(description__contains=request.session.get('search')))
 
-	paginator = Paginator(all_items, 8)
+	paginator = Paginator(all_items, 12)
 	page_number = request.GET.get('page')
 	page_obj = paginator.get_page(page_number)
 
@@ -85,7 +83,6 @@ def list_all(request):
 		"notes": request.session.get('notes'),
 		"bookmarks": request.session.get('bookmarks'),
 		"search": request.session.get('search'),
-		# "page_no": request.session.get('page_no'),
 		"toggle_viewtype": request.session.get('toggle_viewtype'),
 	}
 

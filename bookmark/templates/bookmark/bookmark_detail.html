@@ -1,22 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-    {% include 'components/page_title.html' with heading="Bookmark Detail" %}
     <div class="row">
-        <div class="col-4 offset-4">
-            <div class="card text-center mb-3">
-                <div class="card-header">
+        <div class="col-8 offset-2 jumbotron border border-light mt-3">
+            {% include 'components/page_title.html' with heading="Bookmark Detail" %}
+            <div class="d-flex justify-content-center">
+            <div class="text-center bg-dark py-5 border border-secondary w-75 mb-3">
+                <div class="">
                     <p class="lead my-1">{{ bookmark.name }}</p>
                 </div>
-                <div class="card-body">
+                <div class="">
                     <p>{{ bookmark.description }}</p>
                     <a href="{{ bookmark.url }}">{{ bookmark.name }}</a>
                 </div>
-                <div class="card-footer">
+                <div class="mt-4 ">
                     <a class="btn btn-sm btn-warning mx-1" href="{% url 'bookmark:update' bookmark.id %}">Update</a>
                     <a class="btn btn-sm btn-danger mx-1" href="{% url 'bookmark:delete' bookmark.id %}">Delete</a>
                 </div>
             </div>
-            {% include 'components/back_button.html' %}
+                </div>
+            <div class="form-row mt-4 d-flex justify-content-around">
+                <button class="btn btn-danger w-25" onclick="window.history.back();" style="">Go Back</button>
+            </div>
         </div>
     </div>
 {% endblock %}
