@@ -1,5 +1,6 @@
 from django.core.paginator import Paginator
 from django.db.models import Q, Count
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from queryset_sequence import QuerySetSequence
 
@@ -60,7 +61,7 @@ def list_all(request):
 	if request.POST:
 		request = update_session(request)
 		if request.POST.get("cleartags") == 'true':
-			pass
+			return HttpResponseRedirect(redirect_to='/')
 		redirect('/')
 	# return redirect(request.session.get('url_parameters'))
 
