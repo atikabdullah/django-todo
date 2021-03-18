@@ -41,16 +41,16 @@
                                             <a href="{{ item.url }}">{{ item.name }}</a>
                                         {% elif itemtype == "Note" %}
                                             <a href="{% url 'note:detail' item.id %}">{{ item.name }}</a>
-                                            {% if item.tags.all %}
+                                        {% else %}
+                                            {{ item.name }}
+                                        {% endif %}
+                                    {% if item.tags.all %}
                                                 <div class="float-right">
                                                     {% for tag in item.tags.all %}
                                                         <a href="?tags={{ tag }}" class="ml-2 badge badge-secondary py-2 px-3">{{ tag }}</a>
                                                     {% endfor %}
                                                 </div>
                                             {% endif %}
-                                        {% else %}
-                                            {{ item.name }}
-                                        {% endif %}
                                     </td>
                                     {# Item CRUD Buttons #}
                                     <td colspan="" class="d-flex justify-content-around align-items-center text-right" style="">
