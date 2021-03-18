@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator
 from django.db.models import Q, Count
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect
 from queryset_sequence import QuerySetSequence
 
@@ -67,12 +67,12 @@ def list_all(request):
 
 	todos = Todo.objects.all() if compare_session_value(request, 'todos', 'true') == 'true' else None
 	notes = Note.objects.all() if compare_session_value(request, 'notes', 'true') == 'true' else None
+	bookmarks = Bookmark.objects.all() if compare_session_value(request, 'bookmarks', 'true') == 'true' else None
 	tags = Tag.objects.all()
 	tag_quantities = Note.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c')
 
 	if request.GET.get("tags") and notes is not None:
 		notes = notes.filter(tags__name__in=[request.GET.get("tags")])
-	bookmarks = Bookmark.objects.all() if compare_session_value(request, 'bookmarks', 'true') == 'true' else None
 
 	for item in [todos, notes, bookmarks]:
 		if item is not None:
@@ -100,3 +100,15 @@ def list_all(request):
 
 	site = "index.html" if request.session.get('toggle_viewtype') == 'false' else "index-table.html"
 	return render(request, site, context)
+
+def get_db_as_json(request):
+	todos = Todo.objects.all().values()
+	notes = Note.objects.all().values()
+	bookmarks = Bookmark.objects.all().values()
+	# tags = Tag.objects.all()
+	data = {
+		'todos': list(todos),
+		'notes' : list(notes),
+		'bookmarks' : list(bookmarks)
+	}
+	return JsonResponse(data, safe=False)
