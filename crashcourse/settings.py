@@ -131,6 +131,8 @@ MARKDOWNIFY = {
 			'markdown.extensions.fenced_code',
 			'markdown.extensions.extra',
 			'markdown.extensions.codehilite',
+			'markdown.extensions.abbr',
+
 		],
 		'linenums': True,
 		"WHITELIST_TAGS": [

@@ -8,10 +8,10 @@
         <div class="small text-muted">{{ item | get_class }} <i class="bi bi-file-earmark-font-fill"></i></div>
     </div>
     <div class="d-flex card-body border-left border-right border-secondary flex-column align-content-between">
-        <p>{{ item.card_description }}</p>
+        <p>{{ item.description }}</p>
         <div>
             {% for  item in item.tags.all %}
-                <a class="badge badge-primary" href="">{{ item }}</a>
+                <a href="?tags={{ item }}" class="badge badge-primary" href="">{{ item }}</a>
             {% endfor %}
         </div>
     </div>
