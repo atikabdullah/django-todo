@@ -105,7 +105,7 @@ def get_db_as_json(request):
 	todos = Todo.objects.all().values()
 	notes = Note.objects.all().values()
 	bookmarks = Bookmark.objects.all().values()
-	# tags = Tag.objects.all()
+	tags = Tag.objects.all()
 	data = {
 		'todos': list(todos),
 		'notes' : list(notes),

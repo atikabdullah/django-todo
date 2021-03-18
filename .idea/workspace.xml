@@ -4,12 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add clear tags functionality.">
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add an option for the user to export their user_db to json">
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0006_auto_20210318_2043.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0007_auto_20210318_2056.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0008_auto_20210318_2058.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookmark/migrations/0009_auto_20210318_2100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_back.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tags/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/migrations/0007_auto_20210318_2043.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/migrations/0008_auto_20210318_2056.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/migrations/0009_auto_20210318_2058.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/migrations/0010_auto_20210318_2100.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crashcourse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crashcourse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +129,7 @@
       <workItem from="1615961702240" duration="14414000" />
       <workItem from="1615977813024" duration="4248000" />
       <workItem from="1615983386743" duration="17368000" />
-      <workItem from="1616050726313" duration="27885000" />
+      <workItem from="1616050726313" duration="29552000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -231,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616095561164</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add an option for the user to export their user_db to json">
+      <created>1616096157073</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1616096157073</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +294,7 @@
     <MESSAGE value="Add a footer." />
     <MESSAGE value="Add tags as a filter for search." />
     <MESSAGE value="Add clear tags functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add clear tags functionality." />
+    <MESSAGE value="Add an option for the user to export their user_db to json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add an option for the user to export their user_db to json" />
   </component>
 </project>

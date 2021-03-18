@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 	'note',
 	'bookmark',
 	'markdownify',
+	'tags'
 	# 'markdownify.apps.MarkdownifyConfig',
 ]
 
