@@ -1,10 +1,10 @@
 from django.core.paginator import Paginator
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.shortcuts import render, redirect
 from queryset_sequence import QuerySetSequence
 
 from bookmark.models import Bookmark
-from note.models import Note
+from note.models import Note, Tag
 from todo.models import Todo
 
 
@@ -55,19 +55,23 @@ def list_all(request):
 	if request.session.get('url_parameters') is None:
 		request = set_session(request)
 		redirect('/')
-		# redirect(request.session.get('url_parameters'))
+	# redirect(request.session.get('url_parameters'))
 
 	if request.POST:
 		request = update_session(request)
+		if request.POST.get("cleartags") == 'true':
+			pass
 		redirect('/')
-		# return redirect(request.session.get('url_parameters'))
+	# return redirect(request.session.get('url_parameters'))
 
 	todos = Todo.objects.all() if compare_session_value(request, 'todos', 'true') == 'true' else None
 	notes = Note.objects.all() if compare_session_value(request, 'notes', 'true') == 'true' else None
+	tags = Tag.objects.all()
+	tag_quantities = Note.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c')
+
 	if request.GET.get("tags") and notes is not None:
 		notes = notes.filter(tags__name__in=[request.GET.get("tags")])
 	bookmarks = Bookmark.objects.all() if compare_session_value(request, 'bookmarks', 'true') == 'true' else None
-	# tags = Note.objects.all().filter(tags='')
 
 	for item in [todos, notes, bookmarks]:
 		if item is not None:
@@ -89,6 +93,8 @@ def list_all(request):
 		"bookmarks": request.session.get('bookmarks'),
 		"search": request.session.get('search'),
 		"toggle_viewtype": request.session.get('toggle_viewtype'),
+		"tags": tags,
+		"tag_quantities": tag_quantities
 	}
 
 	site = "index.html" if request.session.get('toggle_viewtype') == 'false' else "index-table.html"
