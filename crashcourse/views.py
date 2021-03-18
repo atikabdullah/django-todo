@@ -54,11 +54,13 @@ def list_all(request):
 
 	if request.session.get('url_parameters') is None:
 		request = set_session(request)
-		redirect(request.session.get('url_parameters'))
+		redirect('/')
+		# redirect(request.session.get('url_parameters'))
 
 	if request.POST:
 		request = update_session(request)
-		return redirect(request.session.get('url_parameters'))
+		redirect('/')
+		# return redirect(request.session.get('url_parameters'))
 
 	todos = Todo.objects.all() if compare_session_value(request, 'todos', 'true') == 'true' else None
 	notes = Note.objects.all() if compare_session_value(request, 'notes', 'true') == 'true' else None

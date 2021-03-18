@@ -23,7 +23,7 @@ SECRET_KEY = '$f7a=&#h24t&&vl!)1ll541wu4c=27%x-rt5ajpy8#yyd3386f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+SITE_ID = 1
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -126,38 +126,44 @@ STATIC_ROOT = "static_root"
 MARKDOWNIFY_STRIP = False
 
 MARKDOWNIFY = {
-    "default": {
-        "MARKDOWN_EXTENSIONS": [
-            'markdown.extensions.fenced_code',
-            'markdown.extensions.extra',
-        ],
-	    "WHITELIST_TAGS": [
-		    'a',
-		    'abbr',
-		    'acronym',
-		    'b',
-		    'blockquote',
-		    'em',
-		    'i',
-		    'li',
-		    'ol',
-		    'p',
-		    'strong',
-		    'ul',
-		    'h1',
-		    'h2',
-		    'h3',
-		    'h4',
-		    'h5',
-		    'h6',
-		    'pre',
-		    'code',
-	    ],
-	    "WHITELIST_ATTRS": [
-		    'href',
-		    'src',
-		    'alt',
-	    ]
+	"default": {
+		"MARKDOWN_EXTENSIONS": [
+			'markdown.extensions.fenced_code',
+			'markdown.extensions.extra',
+			'markdown.extensions.codehilite',
+		],
+		'linenums': True,
+		"WHITELIST_TAGS": [
+			'a',
+			'abbr',
+			'acronym',
+			'b',
+			'blockquote',
+			'em',
+			'i',
+			'li',
+			'ol',
+			'p',
+			'strong',
+			'ul',
+			'h1',
+			'h2',
+			'h3',
+			'h4',
+			'h5',
+			'h6',
+			'pre',
+			'code',
+			'span',
+			'div',
+		],
+		"WHITELIST_ATTRS": [
+			'href',
+			'src',
+			'alt',
+			'class',
+			'style'
+		]
 
-    }
+	}
 }

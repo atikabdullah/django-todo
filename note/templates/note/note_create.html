@@ -16,6 +16,12 @@
                         <input class="form-control" type="text" name="description" id="description" value="">
                     </div>
                     <div class="form-row mb-2">
+                        {{ form.tags }}
+                    </div>
+                    <div class="form-row mb-2">
+                        {{ form.images }}
+                    </div>
+                    <div class="form-row mb-2">
                         <label for="text_content" style="width: 8rem;">Description</label>
                         <textarea maxlength="8000" rows="16" class="form-control" name="text_content" id="text_content"></textarea>
                     </div>
