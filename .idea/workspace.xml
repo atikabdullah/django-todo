@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add a new app for tags. Starting refactoring notes-tags model. Git reset to here if all hell breaks loose.">
-      <change afterPath="$PROJECT_DIR$/note/migrations/0017_auto_20210318_2107.py" afterDir="false" />
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Hah! It worked! :D">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/note/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tags/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/sorting_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +109,7 @@
       <workItem from="1615961702240" duration="14414000" />
       <workItem from="1615977813024" duration="4248000" />
       <workItem from="1615983386743" duration="17368000" />
-      <workItem from="1616050726313" duration="30224000" />
+      <workItem from="1616050726313" duration="33001000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -250,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616097868773</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Hah! It worked! :D">
+      <created>1616098470001</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1616098470001</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +290,7 @@
     <MESSAGE value="Add clear tags functionality." />
     <MESSAGE value="Add an option for the user to export their user_db to json" />
     <MESSAGE value="Add a new app for tags. Starting refactoring notes-tags model. Git reset to here if all hell breaks loose." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a new app for tags. Starting refactoring notes-tags model. Git reset to here if all hell breaks loose." />
+    <MESSAGE value="Hah! It worked! :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hah! It worked! :D" />
   </component>
 </project>

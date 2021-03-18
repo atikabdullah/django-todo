@@ -27,21 +27,40 @@ def set_session(request):
 	sortbydate = request.session['sortbydate'] = 'false'
 	toggle_viewtype = request.session['toggle_viewtype'] = 'false'
 	search = request.session['search'] = ''
+	request.session['no_item_filtering_allowed'] = 'false'
+	enable_item_filtering(request)
+	request.session['active_tag'] = ''
 	request.session['url_parameters'] = f"/?search={search}&todos={todos}&notes={notes}&bookmarks={bookmarks}&toggle_viewtype={toggle_viewtype}&sortbydate={sortbydate}"
 	return request
 
 
+def disable_item_filtering(request):
+	request.session['todos'] = 'true'
+	request.session['notes'] = 'true'
+	request.session['bookmarks'] = 'true'
+	request.session['no_item_filtering_allowed'] = 'true'
+
+def enable_item_filtering(request):
+	request.session['todos'] = 'true'
+	request.session['notes'] = 'true'
+	request.session['bookmarks'] = 'true'
+	request.session['no_item_filtering_allowed'] = 'false'
+
+
 def update_session(request):
-	todos = request.session['todos'] = request.POST.get('todos')
-	notes = request.session['notes'] = request.POST.get('notes')
-	bookmarks = request.session['bookmarks'] = request.POST.get('bookmarks')
+	if request.session['no_item_filtering_allowed'] == 'true':
+		pass
+	else:
+		todos = request.session['todos'] = request.POST.get('todos')
+		notes = request.session['notes'] = request.POST.get('notes')
+		bookmarks = request.session['bookmarks'] = request.POST.get('bookmarks')
 	sortbydate = request.session['sortbydate'] = request.POST.get('sortbydate')
 	toggle_viewtype = request.session['toggle_viewtype'] = request.POST.get('toggle_viewtype')
 	if request.POST.get('reset') != 'true':
 		search = request.session['search'] = request.POST.get('search')
 	else:
 		search = request.session['search'] = ''
-	request.session['url_parameters'] = f"/?search={search}&todos={todos}&notes={notes}&bookmarks={bookmarks}&toggle_viewtype={toggle_viewtype}&sortbydate={sortbydate}"
+	# request.session['url_parameters'] = f"/?search={search}&todos={todos}&notes={notes}&bookmarks={bookmarks}&toggle_viewtype={toggle_viewtype}&sortbydate={sortbydate}"
 	return request
 
 
@@ -63,6 +82,8 @@ def list_all(request):
 	if request.POST:
 		request = update_session(request)
 		if request.POST.get("cleartags") == 'true':
+			request.session['active_tag'] = ''
+			enable_item_filtering(request)
 			return HttpResponseRedirect(redirect_to='/')
 		redirect('/')
 	# return redirect(request.session.get('url_parameters'))
@@ -76,9 +97,15 @@ def list_all(request):
 		Bookmark.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 		Todo.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 	)
-
-	if request.GET.get("tags") and notes is not None:
-		notes = notes.filter(tags__name__in=[request.GET.get("tags")])
+	if request.GET.get("tags"):
+		disable_item_filtering(request)
+		request.session['active_tag'] = request.GET.get("tags")
+		if todos is not None:
+			todos = todos.filter(tags__name__in=[request.GET.get("tags")])
+		if notes is not None:
+			notes = notes.filter(tags__name__in=[request.GET.get("tags")])
+		if bookmarks is not None:
+			bookmarks = bookmarks.filter(tags__name__in=[request.GET.get("tags")])
 
 	for item in [todos, notes, bookmarks]:
 		if item is not None:
@@ -101,7 +128,9 @@ def list_all(request):
 		"search": request.session.get('search'),
 		"toggle_viewtype": request.session.get('toggle_viewtype'),
 		"tags": tags,
-		"tag_quantities": tag_quantities
+		"tag_quantities": tag_quantities,
+		"no_item_filtering_allowed": request.session['no_item_filtering_allowed'],
+		"active_tag" : request.session['active_tag']
 	}
 
 	site = "index.html" if request.session.get('toggle_viewtype') == 'false' else "index-table.html"
