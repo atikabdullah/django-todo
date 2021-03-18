@@ -67,7 +67,7 @@ def list_all(request):
 	if request.GET.get("tags") and notes is not None:
 		notes = notes.filter(tags__name__in=[request.GET.get("tags")])
 	bookmarks = Bookmark.objects.all() if compare_session_value(request, 'bookmarks', 'true') == 'true' else None
-	tags = Note.objects.all().filter(tags='')
+	# tags = Note.objects.all().filter(tags='')
 
 	for item in [todos, notes, bookmarks]:
 		if item is not None:
