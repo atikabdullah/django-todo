@@ -4,11 +4,20 @@ from django.core.paginator import Paginator
 from django.db.models import Q, Count
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.views import generic
 from queryset_sequence import QuerySetSequence
-
 from bookmark.models import Bookmark
+from crashcourse.forms import CustomUserCreationForm
 from note.models import Note
 from todo.models import Todo
+
+class SignupView(generic.CreateView):
+	template_name = "registration/signup.html"
+	form_class = CustomUserCreationForm
+
+	def get_success_url(self):
+		return reverse("login")
 
 
 def set_session(request):
@@ -116,8 +125,8 @@ def get_tags_count():
 
 def get_db_as_json(request):
 	data = {
-		'todos': list(Todo.objects.all().values()),
-		'notes': list(Note.objects.all().values()),
+		'todos': list(Todo.objects.select_related('tags__todo_tags').all().values()),
+		'notes': list(Note.objects.select_related('tags__note_tags').all().values()),
 		'bookmarks': list(Bookmark.objects.all().values())
 	}
 	return JsonResponse(data, safe=False)

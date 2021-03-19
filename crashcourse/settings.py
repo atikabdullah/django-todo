@@ -25,7 +25,8 @@ SECRET_KEY = '$f7a=&#h24t&&vl!)1ll541wu4c=27%x-rt5ajpy8#yyd3386f'
 DEBUG = True
 SITE_ID = 1
 ALLOWED_HOSTS = []
-
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/signup/"
 # Application definition
 
 INSTALLED_APPS = [
