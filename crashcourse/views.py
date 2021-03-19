@@ -1,3 +1,4 @@
+import sys
 from itertools import chain
 
 from django.core.paginator import Paginator
@@ -39,6 +40,7 @@ def disable_item_filtering(request):
 	request.session['notes'] = 'true'
 	request.session['bookmarks'] = 'true'
 	request.session['no_item_filtering_allowed'] = 'true'
+
 
 def enable_item_filtering(request):
 	request.session['todos'] = 'true'
@@ -92,11 +94,22 @@ def list_all(request):
 	notes = Note.objects.all() if compare_session_value(request, 'notes', 'true') == 'true' else None
 	bookmarks = Bookmark.objects.all() if compare_session_value(request, 'bookmarks', 'true') == 'true' else None
 	tags = Tag.objects.all()
-	tag_quantities = chain(
+	tags_quantities_per_object = chain(
 		Note.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 		Bookmark.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 		Todo.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 	)
+	tag_quantities = dict()
+	for name,val in list(tags_quantities_per_object):
+		print("---" + str(name) + "++" + str(val) + "++" + str(tag_quantities.get(name)))
+		if tag_quantities.get(name) is not None:
+			new_quantity = int(val) + int(tag_quantities.get(name))
+			tag_quantities.update({name : new_quantity})
+		else:
+			tag_quantities.update({name: val})
+
+	tag_quantities = tag_quantities.items()
+
 	if request.GET.get("tags"):
 		disable_item_filtering(request)
 		request.session['active_tag'] = request.GET.get("tags")
@@ -130,7 +143,7 @@ def list_all(request):
 		"tags": tags,
 		"tag_quantities": tag_quantities,
 		"no_item_filtering_allowed": request.session['no_item_filtering_allowed'],
-		"active_tag" : request.session['active_tag']
+		"active_tag": request.session['active_tag']
 	}
 
 	site = "index.html" if request.session.get('toggle_viewtype') == 'false' else "index-table.html"
