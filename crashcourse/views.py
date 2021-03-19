@@ -1,4 +1,3 @@
-import sys
 from itertools import chain
 
 from django.core.paginator import Paginator
@@ -52,15 +51,16 @@ def enable_item_filtering(request):
 def update_session(request):
 	if request.session['no_item_filtering_allowed'] == 'true':
 		pass
-	else:
+	elif request.POST.get('todos') or request.POST.get('notes') or request.POST.get('bookmarks'):
 		todos = request.session['todos'] = request.POST.get('todos')
 		notes = request.session['notes'] = request.POST.get('notes')
 		bookmarks = request.session['bookmarks'] = request.POST.get('bookmarks')
-	sortbydate = request.session['sortbydate'] = request.POST.get('sortbydate')
-	toggle_viewtype = request.session['toggle_viewtype'] = request.POST.get('toggle_viewtype')
-	if request.POST.get('reset') != 'true':
+	if request.POST.get('sortbydate') or request.POST.get('toggle_viewtype'):
+		sortbydate = request.session['sortbydate'] = request.POST.get('sortbydate')
+		toggle_viewtype = request.session['toggle_viewtype'] = request.POST.get('toggle_viewtype')
+	if request.POST.get('search') and request.POST.get('reset') != 'true':
 		search = request.session['search'] = request.POST.get('search')
-	else:
+	elif request.POST.get('search') and request.POST.get('reset') == 'true':
 		search = request.session['search'] = ''
 	# request.session['url_parameters'] = f"/?search={search}&todos={todos}&notes={notes}&bookmarks={bookmarks}&toggle_viewtype={toggle_viewtype}&sortbydate={sortbydate}"
 	return request
@@ -94,17 +94,19 @@ def list_all(request):
 	notes = Note.objects.all() if compare_session_value(request, 'notes', 'true') == 'true' else None
 	bookmarks = Bookmark.objects.all() if compare_session_value(request, 'bookmarks', 'true') == 'true' else None
 	tags = Tag.objects.all()
+
+	""" Combine tag number from each model type """
 	tags_quantities_per_object = chain(
 		Note.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 		Bookmark.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 		Todo.objects.values_list('tags__name').annotate(c=Count('tags__name')).order_by('-c'),
 	)
 	tag_quantities = dict()
-	for name,val in list(tags_quantities_per_object):
+	for name, val in list(tags_quantities_per_object):
 		print("---" + str(name) + "++" + str(val) + "++" + str(tag_quantities.get(name)))
 		if tag_quantities.get(name) is not None:
 			new_quantity = int(val) + int(tag_quantities.get(name))
-			tag_quantities.update({name : new_quantity})
+			tag_quantities.update({name: new_quantity})
 		else:
 			tag_quantities.update({name: val})
 

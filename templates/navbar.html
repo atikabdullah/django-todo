@@ -8,6 +8,18 @@
             <li class="nav-item active">
                 <a tabindex="-1" class="nav-link" href="/">All Items</a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Create New
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'todo:create' %}">New Todo</a>
+                    <a class="dropdown-item" href="{% url 'note:create' %}">New Note</a>
+                    <a class="dropdown-item" href="{% url 'bookmark:create' %}">New Bookmark</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Administer Tags</a>
+                </div>
+            </li>
             <li class="nav-item">
                 <a tabindex="-1" class="nav-link" href="">Archive</a>
                 {#                TODO: Implement#}
@@ -16,16 +28,15 @@
                 <a tabindex="-1" class="nav-link" href="/getdb/">Export Data</a>
             </li>
         </ul>
-        <div class="float-right ml-auto">
-{#            <form method="post">#}
-{#                {% csrf_token %}#}
-{#                <div class="input-group m-0 mb-1">#}
-{#                    <input tabindex="1" onkeypress="if (event.keyCode === 13){submit();}" class="{% if search %} bg-warning text-white {% endif %}form-control" name="search" type="search" value="{{ search }}" placeholder="Search Items 🔍" aria-label="Search" style="">#}
-{#                    <button tabindex="2" onclick="this.value='true';submit();" class="btn btn-sm btn-info" name="reset" value="" type="submit">Reset</button>#}
-{#                    <button tabindex="3" class="btn btn-sm btn-success border-0" type="submit">Search</button>#}
-{#                </div>#}
-{#            </form>#}
-
+        <div class="ml-auto">
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-group m-0 mb-1">
+                    <input tabindex="1" onkeypress="if (event.keyCode === 13){submit();}" class="{% if search %} bg-warning text-white {% endif %}form-control" name="search" type="search" value="{{ search }}" placeholder="Search Items 🔍" aria-label="Search" style="">
+                    <button tabindex="2" onclick="this.value='true';submit();" class="btn btn-sm btn-info" name="reset" value="" type="submit">Reset</button>
+                    <button tabindex="3" class="btn btn-sm btn-success border-0" type="submit">Search</button>
+                </div>
+            </form>
         </div>
     </div>
 </nav>

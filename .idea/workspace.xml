@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add styling to active tags. Add styling to 'Clear Tags' btn if a tag is active.">
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Combine tag quantities for each object.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmark/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmark/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tags/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/sorting_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +114,7 @@
       <workItem from="1615983386743" duration="17368000" />
       <workItem from="1616050726313" duration="34903000" />
       <workItem from="1616137238614" duration="7534000" />
-      <workItem from="1616150077316" duration="1224000" />
+      <workItem from="1616150077316" duration="3380000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>
@@ -262,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616101258876</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Combine tag quantities for each object.">
+      <created>1616151372392</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616151372392</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +311,8 @@
     <MESSAGE value="Add a new app for tags. Starting refactoring notes-tags model. Git reset to here if all hell breaks loose." />
     <MESSAGE value="Hah! It worked! :D" />
     <MESSAGE value="Add styling to active tags. Add styling to 'Clear Tags' btn if a tag is active." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add styling to active tags. Add styling to 'Clear Tags' btn if a tag is active." />
+    <MESSAGE value="Combine tag quantities for each object." />
+    <option name="LAST_COMMIT_MESSAGE" value="Combine tag quantities for each object." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
