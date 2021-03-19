@@ -9,6 +9,7 @@ class Bookmark(models.Model):
 	tags = models.ManyToManyField(Tag, related_name='bookmark_tags')
 	description = models.CharField(max_length=500)
 	url = models.URLField()
+	item_type = models.CharField(default="Bookmark", max_length=16, null=False)
 	date_created = models.DateTimeField(default=timezone.now)
 
 	def __str__(self):

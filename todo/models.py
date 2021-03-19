@@ -10,6 +10,7 @@ class Todo(models.Model):
 	description = models.CharField(max_length=500)
 	due_date = models.DateField()
 	checked = models.BooleanField(default=False)
+	item_type = models.CharField(default="Todo", max_length=16, null=False)
 	date_created = models.DateTimeField(default=timezone.now)
 
 	def __str__(self):

@@ -17,6 +17,7 @@ class Note(models.Model):
 	images = models.ForeignKey(ArticleImage, null=True, on_delete=models.CASCADE)
 	description = models.CharField(max_length=120, null=True)
 	text_content = models.TextField(max_length=8000, null=True)
+	item_type = models.CharField(default="Note", max_length=16, null=False)
 	date_created = models.DateTimeField(default=timezone.now)
 
 	def __str__(self):
