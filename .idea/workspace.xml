@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Refactoring - cut 42 loc off the main view.">
-      <change afterPath="$PROJECT_DIR$/crashcourse/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
+    <list default="true" id="342aef49-7d07-48a4-9b25-2acc6f4c2d13" name="Default Changelist" comment="Add login/logout and signup features.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crashcourse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crashcourse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crashcourse/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crashcourse/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/sorting_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sorting_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +114,7 @@
       <workItem from="1616050726313" duration="34903000" />
       <workItem from="1616137238614" duration="7534000" />
       <workItem from="1616150077316" duration="16344000" />
+      <workItem from="1616236351381" duration="2705000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1615631186398</created>

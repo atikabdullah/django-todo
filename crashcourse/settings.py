@@ -40,11 +40,12 @@ INSTALLED_APPS = [
 	'todo',
 	'note',
 	'bookmark',
+	'crispy_forms',
 	'markdownify',
 	'tags'
 	# 'markdownify.apps.MarkdownifyConfig',
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
 	'django.middleware.security.SecurityMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
