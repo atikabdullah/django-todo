@@ -1,4 +1,5 @@
 {% load get_class %}
+{% load humanize %}
 <div class="card border-top-0 border-right-0 border-left-0 border-2 border-info text-center mb-3 mx-2" style="min-width: 18rem; max-width: 18rem;">
     <div class="card-header">
         <div class="card-title my-1 text-truncate">
@@ -24,7 +25,7 @@
                href="#">Delete</a>
         </div>
         <div class="pb-1">
-            <span class="small text-muted">{{ item.date_created }}</span>
+            <span class="small text-muted">{{ item.date_created |naturalday }}</span>
         </div>
     </div>
 </div>

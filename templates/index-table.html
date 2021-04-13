@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load get_class %}
+{% load humanize %}
 {% block content %}
     <div class="row">
         <div class="col-12 mt-2">
@@ -94,7 +95,7 @@
                                             <div class="text-muted">{{ item.text_content  | length }} chars.</div>
                                         {% endif %}
                                         {% if item.due_date %}
-                                            <span class="{% if item.due_date %}text-danger {% else %} text-success {% endif %}">Due {{ item.due_date }}</span>
+                                            <span class="{% if item.due_date %}text-danger {% else %} text-success {% endif %}">Due {{ item.due_date |naturalday}}</span>
                                             {#                                            TODO: Add  logic to determine if date is overdue.#}
                                         {% endif %}
                                     </td>
