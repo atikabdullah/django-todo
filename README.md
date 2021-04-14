@@ -1,4 +1,4 @@
-# Django CRUD Todo
+# Django Todo
 I made this project to learn Django and working with session storage. I won't be updating or improving it any further.
 ## What is it?
 * A basic todo app with create, read, update, delete and list features.
