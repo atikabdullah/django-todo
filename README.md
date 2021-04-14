@@ -8,7 +8,7 @@ I made this project to learn Django and working with session storage. I won't be
 * Minor work has been made towards user integration features.
 
 ![](./scrsh1.png)
-![](./scrsh2.png)
+![](./scrsh2.PNG)
 ![](./scrsh3.png)
 ![](./scrsh4.png)
 
